@@ -1,0 +1,17 @@
+<!-- res/drawable/search_view_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#e1e1e1" /> <!-- Background color -->
+
+    <!-- Adjust the corner radius to your preference -->
+    <corners android:radius="30dp" />
+
+    <!-- Optional padding for the content inside -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+
+    <!-- Optional stroke (border) around the background -->
+    <!-- Border color -->
+</shape>

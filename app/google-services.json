@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "642122637804",
+    "project_id": "bookmyfeast",
+    "storage_bucket": "bookmyfeast.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642122637804:android:46b8b60e25b8b6f51b20c9",
+        "android_client_info": {
+          "package_name": "com.example.bookmyfeast"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANuLucDoL8QzSOVq-KTojJ9AFuB8gZjuM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

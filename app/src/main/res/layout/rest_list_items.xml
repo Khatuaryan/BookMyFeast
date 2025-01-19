@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="25dp"
+    app:cardBackgroundColor="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="29dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/backgroundImageCard"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            android:layout_alignParentTop="true"
+            android:clipChildren="true"
+            android:clipToPadding="true">
+
+            <ImageView
+                android:id="@+id/backgroundImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_below="@id/backgroundImageCard">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/restaurantName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/restaurantRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/boxy_rounded_corner"
+                    android:padding="6dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="#27FF00"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/restaurantLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/restaurantCuisine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/restaurantPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_blue"
+    tools:context=".RestaurantPage">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_back"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_layout"
+        android:layout_below="@id/back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/cafeImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/restaurantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/orange"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_gravity="end"
+                android:layout_marginTop="-48dp"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:id="@+id/ratingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textColor="@color/white"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restaurant Information"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/timings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Timings – 11:30AM to 9:00PM"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp" />
+
+            <Button
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textAlignment="viewStart"
+                android:backgroundTint="@color/navy_blue"
+                android:layout_marginStart="-20dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/reservationDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Table Reservation Details"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Spinner
+                    android:id="@+id/dateSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_background"
+                    android:spinnerMode="dropdown"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="@color/grey"/>
+
+                <Spinner
+                    android:id="@+id/timeSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_background"
+                    android:spinnerMode="dropdown"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="@color/grey"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/guestCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of Guests"
+                android:textColor="@color/white"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp" />
+
+            <Spinner
+                android:id="@+id/guestSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_background"
+                android:spinnerMode="dropdown"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/grey"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#121B3B"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/payBillButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PAY BILL"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="10dp"/>
+
+        <Button
+            android:id="@+id/bookNowButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="BOOK NOW"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="10dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

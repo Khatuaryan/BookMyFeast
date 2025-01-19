@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Book My Feast</string>
+    <string name="discount_txt">Flat 20% off + discounts on credit cards</string>
+    <string name="pay_bill_instruction_text">Enter total amount as shown on the bill</string>
+    <string name="offer_text">Walk-in offer\nFlat 15% off\non total bill</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="rate_us">Rate us on App Store</string>
+    <string name="pay_text"><![CDATA[Apply offers & pay]]></string>
+    <string-array name="price_range_options">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="currency_options">
+        <item>USD</item>
+        <item>EUR</item>
+        <item>INR</item>
+    </string-array>
+</resources>

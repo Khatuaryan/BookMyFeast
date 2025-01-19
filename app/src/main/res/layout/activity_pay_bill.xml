@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/navy_blue"
+    tools:context=".PayBillActivity">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_back"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+
+    <!-- Title Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PAYING BILL TO"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp" />
+
+    <TextView
+        android:id="@+id/restName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFFFF"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/restLocverb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFFFF"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingBottom="16dp" />
+
+    <!-- Amount Section -->
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="₹ 0.00"
+        android:textColor="#FFFFFFFF"
+        android:textColorHint="#FFFFFFFF"
+        android:textSize="36sp"
+        android:gravity="center"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pay_bill_instruction_text"
+        android:textColor="#FFFFFFFF"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingBottom="16dp" />
+
+    <!-- Offers Section -->
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/boxy_rounded_corner"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <!-- Walk-in Offer Button -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/offer_text"
+            android:textColor="#121B3B"
+            android:backgroundTint="@android:color/transparent"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Coupon Offer Button -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coupons\nFlat 5% off*\nuse HDFCCARDS"
+            android:textColor="#121B3B"
+            android:backgroundTint="@android:color/transparent"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ Up to extra 15% off with payment partner offers"
+        android:textColor="#FFFFFFFF"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingBottom="16dp" />
+
+    <!-- View Restaurant Button -->
+    <Button
+        android:id="@+id/viewRestaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View restaurant"
+        android:textColor="#FFFFFFFF"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:background="@android:color/transparent"/>
+
+    <!-- Apply Offers Button -->
+    <Button
+        android:id="@+id/payButton"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pay_text"
+        android:backgroundTint="#F64308"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

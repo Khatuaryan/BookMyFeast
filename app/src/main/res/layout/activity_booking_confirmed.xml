@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#11193a"
+    tools:context=".BookingConfirmedActivity">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_back"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:onClick="backToHome"/>
+
+    <ImageView
+        android:id="@+id/success_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_success"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        app:tint="@color/yellow" />
+
+    <TextView
+        android:id="@+id/confirmed_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Booking Confirmed!"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/success_icon"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/booking_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Booking ID: 123456"
+        android:textColor="@color/grey"
+        android:textSize="16sp"
+        android:layout_below="@id/confirmed_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/booking_details_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Booking Details"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/booking_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <LinearLayout
+        android:id="@+id/booking_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/booking_details_header"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/rounded_corners"
+        android:layout_margin="20dp"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/restaurant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XYZ Bistro"
+            android:textColor="@color/brown"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/restaurant_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1234 Culinary Ave, Food City"
+            android:textColor="@color/brown"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginVertical="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textColor="@color/yellow"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/booking_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Oct 30, 2024"
+                    android:textColor="@color/brown"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time"
+                    android:textColor="@color/yellow"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/booking_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7:00 PM"
+                    android:textColor="@color/brown"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guests"
+                    android:textColor="@color/yellow"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/guest_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:textColor="@color/brown"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/offer_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Offer Applied: 15% off on total bill"
+            android:textColor="@color/brown"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:layout_below="@id/booking_details"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/white"
+        android:onClick="backToHome"/>
+
+    <Button
+        android:id="@+id/need_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Need Help?"
+        android:textColor="@color/yellow"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_below="@id/continue_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:gravity="center" />
+
+</RelativeLayout>

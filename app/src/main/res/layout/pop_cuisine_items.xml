@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="10sp">
+
+    <ImageButton
+        android:id="@+id/cuisine_img_btn"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:scaleType="centerInside"
+        android:background="@drawable/circle_icon_bg" />
+
+    <TextView
+        android:id="@+id/cuisine_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

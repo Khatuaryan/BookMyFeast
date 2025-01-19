@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#11193a"
+    tools:context=".PaymentSuccessActivity">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_back"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+
+    <ImageView
+        android:id="@+id/success_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_success"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        app:tint="@color/green" />
+
+    <TextView
+        android:id="@+id/success_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Successful!"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/success_icon"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/restaurant_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurant XYZ\n1234 Street Name\nCity, State - 123456"
+        android:textColor="@color/grey"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_below="@id/success_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/bill_details_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bill Details"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/restaurant_info"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/bill_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/bill_details_header"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/rounded_corners"
+        android:layout_margin="20dp"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/item_total_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Total:"
+                android:textColor="@color/brown"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item_total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹1000.00"
+                android:textColor="#453F3F"
+                android:textSize="16sp"
+                android:layout_marginStart="140dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/discount_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discount:"
+                android:textColor="@color/brown"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/discount_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-₹100.00"
+                android:textColor="@color/brown"
+                android:textSize="16sp"
+                android:layout_marginStart="150dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tax_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tax:"
+                android:textColor="@color/brown"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tax_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹50.00"
+                android:textColor="@color/brown"
+                android:textSize="16sp"
+                android:layout_marginStart="190dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/total_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹950.00"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="170dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:layout_below="@id/bill_details"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/need_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Need Help?"
+        android:textColor="@color/green"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_below="@id/continue_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:gravity="center" />
+
+</RelativeLayout>

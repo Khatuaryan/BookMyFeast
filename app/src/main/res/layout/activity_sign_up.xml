@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity"
+    android:background="@color/navy_blue">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_top_square_bottom">
+
+        <TextView
+            android:id="@+id/nhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textColor="@color/black"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="30dp"/>
+
+        <EditText
+            android:id="@+id/fullname"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/nhead"
+            android:background="@drawable/edit_text_bg"
+            android:layout_margin="10dp"
+            android:textColor="@color/navy_blue"
+            android:inputType="textPersonName"/>
+
+        <TextView
+            android:id="@+id/phead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="30dp"
+            android:layout_below="@id/fullname"/>
+
+        <EditText
+            android:id="@+id/ph_num"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/phead"
+            android:background="@drawable/edit_text_bg"
+            android:layout_margin="10dp"
+            android:textColor="@color/navy_blue"
+            android:inputType="phone"/>
+
+        <TextView
+            android:id="@+id/ehead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/black"
+            android:layout_below="@id/ph_num"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/ehead"
+            android:background="@drawable/edit_text_bg"
+            android:layout_margin="10dp"
+            android:textColor="@color/navy_blue"
+            android:inputType="textEmailAddress"/>
+
+        <TextView
+            android:id="@+id/passhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_below="@id/email"/>
+
+        <EditText
+            android:id="@+id/register_psd"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/passhead"
+            android:background="@drawable/edit_text_bg"
+            android:layout_margin="10dp"
+            android:textColor="@color/navy_blue"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up"
+            android:backgroundTint="@color/orange"
+            android:layout_below="@id/register_psd"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/signup"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Already have an account?"/>
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/orange"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        android:background="@drawable/rounded_corners"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:clipToOutline="true"
+        tools:ignore="UnusedAttribute" />
+
+</RelativeLayout>

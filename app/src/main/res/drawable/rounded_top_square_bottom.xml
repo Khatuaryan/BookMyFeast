@@ -1,0 +1,17 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" /> <!-- White background color -->
+
+    <!-- Rounded corners for top-left and top-right only -->
+    <corners
+        android:topLeftRadius="70dp"
+        android:topRightRadius="70dp"
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="0dp" />
+
+    <!-- Optional: Add padding if needed -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+</shape>

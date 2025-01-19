@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_blue"
+    tools:context=".RestaurantListActivity">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_back"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp" />
+
+    <ListView
+        android:id="@+id/rest_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back"
+        android:padding="10dp"
+        android:dividerHeight="20dp"
+        android:divider="@android:color/transparent"
+        android:layout_margin="20dp"
+        android:visibility="visible"/>
+
+</RelativeLayout>

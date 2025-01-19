@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_blue"
+    tools:context=".HomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/search"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="@string/search"
+                android:textAlignment="viewStart"
+                android:textSize="15sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginHorizontal="20dp"
+                android:textColor="@color/grey"
+                android:backgroundTint="@color/white"/>
+
+            <TextView
+                android:id="@+id/greeting_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/search"
+                android:text="Hey Smit, What’s cooking in your mind?"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/meal_type_items"
+                android:layout_marginStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/greeting_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:scrollbars="none" />
+
+            <TextView
+                android:id="@+id/recom_rest_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/meal_type_items"
+                android:text="Recommended Restaurants"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recom_rest_items"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recom_rest_text"
+                android:layout_marginTop="20dp"
+                android:visibility="visible"
+                android:layout_marginStart="20dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                />
+
+            <TextView
+                android:id="@+id/pop_cuisine_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recom_rest_items"
+                android:text="Popular Cuisines"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pop_cuisine_items"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/pop_cuisine_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:scrollbars="none"
+                android:layout_marginStart="20dp"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/best_buffet_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pop_cuisine_items"
+                android:text="Best Buffet"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"/>
+
+            <RelativeLayout
+                android:id="@+id/best_buffet_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/best_buffet_text">
+
+                <ListView
+                    android:id="@+id/best_buffet_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="20dp"
+                    tools:ignore="NestedScrolling" />
+
+                <Button
+                    android:id="@+id/bb_view_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/best_buffet_lv"
+                    android:backgroundTint="#27366D"
+                    android:text="View All"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/fine_dine_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/best_buffet_items"
+                android:text="Fine Dining"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"/>
+
+            <ListView
+                android:id="@+id/fine_dine_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fine_dine_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="150dp"
+                tools:ignore="NestedScrolling" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_pay_bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pay_bill"
+        app:maxImageSize="60dp"
+        app:tint="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp"
+        app:backgroundTint="@color/orange"
+        app:fabCustomSize="80dp"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:background="#333"
+        app:itemIconSize="40dp"/>
+
+</RelativeLayout>
